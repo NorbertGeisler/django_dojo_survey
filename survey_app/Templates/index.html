@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <form action="/result" method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Your Name:</td>
+                <td><input type="text" name="form_name"></td>
+            </tr>
+            <tr>
+                <td>Dojo Location:</td>
+                <td>
+                    <select name="dojo_location">
+                        <option value="San_Hose">San Jose</option>
+                        <option value="Seattle">Seattle</option>
+                        <option value="Los_Angeles">Los Angeles</option>
+                        <option value="Dallas">Dallas</option>
+                        <option value="Arlington">Arlington</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Tulsa">Tulsa</option>
+                        <option value="Oakland">Oakland</option>
+                        <option value="Boise">Boise</option>
+                        <option value="Orange_County">Orange County</option>
+                        <option value="Online">Online</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Favorite Language:</td>
+                <td>
+                    <select name="favorite_language">
+                        <option value="javascript">Javascript</option>
+                        <option value="python">Python</option>
+                        <option value="c_sharp">C#</option>
+                        <option value="c++">C++</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><td>Comment (optional):</td></tr>
+        </table>
+        <textarea name="form_comment" id="" cols="40" rows="8"></textarea>
+        <br>
+        <input type="submit" value="Let's go!">
+    </form>
+</body>
+</html>
